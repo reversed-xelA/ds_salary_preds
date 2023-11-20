@@ -123,7 +123,7 @@ lm_l_a_metrics = regression_metrics(lm_l_a, X_train, y_train, X_test, y_test)
 lm_summary = pd.DataFrame({'Linear Regression': lm.coef_}, index=X_train.columns)
 lm_l_a_summary = pd.DataFrame({'Lasso Regression': lm_l_a.coef_}, index=X_train.columns)
 
-# Optionally, add the performance metrics to the summary table
+# Add the performance metrics to the summary table
 for key, value in lm_metrics.items():
     lm_summary.loc[key] = value
 for key, value in lm_l_a_metrics.items():
