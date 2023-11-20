@@ -58,9 +58,23 @@ grid_search = GridSearchCV(estimator=rf, param_grid=param_grid,
                            cv=3, n_jobs=-1, verbose=2, scoring='neg_mean_absolute_error')
 
 grid_search.fit(X_train, y_train)
+best_rf_model = grid_search.best_estimator_
 
 # Test ensembles
-tpred_rf = grid_search.best_estimator_.predict(X_test)
+tpred_rf = best_rf_model.predict(X_test)
 print(mean_absolute_error(y_test, tpred_rf))
 
+# Assesing the importance of each variable to model prediction
+importances = best_rf_model.feature_importances_
+feature_names = X.columns
+feature_importances = pd.Series(importances, index=feature_names).sort_values(ascending=False)
+print(feature_importances)
 
+import shap
+
+# Calculate SHAP values
+explainer = shap.TreeExplainer(best_rf_model)
+shap_values = explainer.shap_values(X_train)
+
+# Plot SHAP values for the first few instances
+shap.summary_plot(shap_values, X_train, plot_type="bar")
