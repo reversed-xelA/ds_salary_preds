@@ -84,3 +84,5 @@ shap_values = explainer.shap_values(X_train)
 
 # Plot SHAP values to visualize the importance of features
 shap.summary_plot(shap_values, X_train, plot_type="bar")  # Bar plot of SHAP values
+# Plot SHAP values for the first few instances
+shap.summary_plot(shap_values, X_train, plot_type="bar")
