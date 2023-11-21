@@ -1,4 +1,6 @@
-# ds_salary_preds
+# Data Analyst/Scientist Job Listing Analysis and Salaray Estimator
+## Project Overview
+
 
 ## resources
 Ideas for scraping program:
