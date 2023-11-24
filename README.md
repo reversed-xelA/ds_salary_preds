@@ -27,7 +27,8 @@ The following details were scraped from each job listing:
 * Company industry
 * Company sector
 * Company revenue
-* Job description
+* Job description   
+
 _See scraperREADME for more details_
 
 ## Data Cleaning
@@ -61,7 +62,7 @@ The Random Forest model far outperformed the other approaches on the test sets.
 ## Key Findings in EDA, Modelling and NLP
 ### Companies and job offerings
 * Overall, companies were rated quite highly, with an average rating of 3.8/5.
-* 84% of jobs are being offered by private and public companies and the most common sectors for job offerings are human resources and staffing, finance, and IT at 13%, 11% and 10%, respectively.
+* 84% of jobs are being offered by private and public companies and the most common sectors for job offerings are human resources, finance, and IT at 13%, 11% and 10%, respectively.
 
 ![image](https://github.com/reversed-xelA/ds_salary_preds/assets/141697086/b6c8443c-b961-4419-bc2c-46597f8c081e)
 
@@ -74,28 +75,28 @@ The Random Forest model far outperformed the other approaches on the test sets.
 
   ![image](https://github.com/reversed-xelA/ds_salary_preds/assets/141697086/e9377385-f985-4b82-a920-871abaf6363f)
 
-* Government jobs pay the most on average (~$110K), yet this was not a significant difference (p > 0.05). Conversely, jobs in New South Wales offer significantly higher salaries (~$109K, p = 0.005).
+* Government jobs pay the most on average (~ $110K), yet this was not a significant difference (p > 0.05). Conversely, jobs in New South Wales offer significantly higher salaries (~$109K, p = 0.005).
 
 ![image](https://github.com/reversed-xelA/ds_salary_preds/assets/141697086/38370e1a-59b3-45b7-951c-d68bb2005a6c)
 ![image](https://github.com/reversed-xelA/ds_salary_preds/assets/141697086/9a825256-a284-44df-8ca1-e7b25c867fe4)
 
-* Overall, there was not a high level of correlation between any of the variables and salary.
+* Overall, there wasn't a high level of correlation between any of the variables and salary.
 
   ![image](https://github.com/reversed-xelA/ds_salary_preds/assets/141697086/4c78163d-873e-44fc-9616-8eb6d29e85bd)
 
 * The machine learning skill recorded the highest correlation with salary, leading to a significant (p < 0.000) increase in salary at an average of ~$16K more than jobs not requiring machine learning.
-* Other technical skills like Python, SQL, math and statistics also indicated higher salaries; however, the correlations are low, and the effect is not significant (p >0.005).
+* Other technical skills like Python, SQL, math and statistics also indicated higher salaries; however, the correlations are low, and the effect is not significant (p >0.05).
 * Interestingly, excel was indicative of a lower salary, with these jobs earning a significant difference (p = 0.007) of ~$5K less on average.
 * Regarding less technical skills, the ability to present data (presentation skill) looked to have a significant (p = 0.004), although small, impact on salary, increasing it by ~5K on average.
 * Understandably, senior positions were offering higher salaries at ~6K more on average (p = 0.009).
 
 ### NLP findings
-* From those listings that mentioned the years of experience required, the average requirement was ~4 years of experience.
+* From those listings that mentioned the years of experience required, the average requirement was ~4 years of experience (if a range was provided for experience required, the average was taken).
 
 ![image](https://github.com/reversed-xelA/ds_salary_preds/assets/141697086/611f659f-6e34-46c1-8659-a03bba7f15c6)
 
 * Reporting, SQL and Python capabilities are the most requested technical skills, with 48%, 32% and 20% of listings mentioning these skills, respectively.
-* There is also a high emphasis on visualisation and database skills.
+* There is also a high emphasis on visualisation and database skills (larger words in the word cloud indicate higher frequencies).
 
 ![image](https://github.com/reversed-xelA/ds_salary_preds/assets/141697086/03164536-d025-4df2-b53d-fbb6d73e176f)
 
